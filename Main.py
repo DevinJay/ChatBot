@@ -25,12 +25,13 @@ import pickle
 
 with open("intents.json") as file:
     data=json.load(file)
-data
+
 
 
 # In[7]:
 
 try:
+	r
 	with open("data.pickle", "rb") as f:
 		words,labels,training,output=pickle.load(f)
 
@@ -121,12 +122,13 @@ model=tflearn.DNN(net)
 
 # In[15]:
 
-# try:
-model.load("model.tflearn")
+try:
+	r
+	model.load("model.tflearn")
 # 	1
-# except:
-#model.fit(training, output, n_epoch=1000, batch_size=8, show_metric=True)
-#model.save("model.tflearn")
+except:
+	model.fit(training, output, n_epoch=1000, batch_size=8, show_metric=True)
+	model.save("model.tflearn")
 
 def bag_of_words(s,words):
 	bag=[0 for _ in range(len(words))]
@@ -152,11 +154,11 @@ def chat():
 		#print(results)
 		results_index=np.argmax(results)
 		tag= labels[results_index]
-		print(tag)
+		#print(tag)
 
 
 		for tg in data["intents"]:
-			if tf['tag']== tag:
+			if tg['tag']== tag:
 				responses= tg['responses']
 
 		print(random.choice(responses))

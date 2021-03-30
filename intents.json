@@ -15,8 +15,8 @@
          "context_set": ""
         },
         {"tag": "name",
-         "patterns": ["what is your name", "what should I call you", "whats your name?"],
-         "responses": ["You can call me Tim.", "I'm Tim!", "I'm Tim aka Tech With Tim."],
+         "patterns": [ "what should I call you", "whats your name?","who?"],
+         "responses": ["I'm a chatbot, call me any name you want.", "I'm an AI powered chatting program!", "I'm an AI."],
          "context_set": ""
         },
         {"tag": "shop",
