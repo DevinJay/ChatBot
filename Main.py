@@ -31,7 +31,7 @@ with open("intents.json") as file:
 # In[7]:
 
 try:
-	r
+	
 	with open("data.pickle", "rb") as f:
 		words,labels,training,output=pickle.load(f)
 
@@ -123,7 +123,7 @@ model=tflearn.DNN(net)
 # In[15]:
 
 try:
-	r
+	
 	model.load("model.tflearn")
 # 	1
 except:
